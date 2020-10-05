@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='deploycss.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BILL DEFAULTER PREDICTOR</h1>
+        <h6>
+            Machine Learning App using Flask & Heroku
+        </h6>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="tags">
+                <input type="text" name="Limitbal" placeholder="LimitBalance" required="required" />
+            </div>
+            <div class="tags">
+                <input type="text" name="Education" placeholder="Education" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Marriage" placeholder="Marriage" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Age" placeholder="Age" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Pay1" placeholder="Pay1" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Bill1" placeholder="Bill1" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Bill2" placeholder="Bill2" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Bill3" placeholder="Bill3" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Bill4" placeholder="Bill4" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Bill5" placeholder="Bill5" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Bill6" placeholder="Bill6" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Payamt1" placeholder="Payamt1" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Payamt2" placeholder="Payamt2" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Payamt3" placeholder="Payamt3" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Payamt4" placeholder="Payamt4" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Payamt5" placeholder="Payamt5" required="required" />
+
+            </div>
+            <div class="tags">
+                <input type="text" name="Payamt6" placeholder="Payamt6" required="required" />
+
+            </div>
+
+            <div class="predict">
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+            </div>
+
+        </form>
+
+        <br>
+        <br>
+
+    </div>
+
+</body>
+
+</html>
